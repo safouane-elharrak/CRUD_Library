@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!DOCTYPE library [
+<!ELEMENT library (book+)>
+<!ELEMENT book (title,author)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ATTLIST book num ID #REQUIRED>
+<!ATTLIST book type (fiction|politique|Drame|aventure) #REQUIRED>
+<!ATTLIST title name CDATA #REQUIRED>
+<!ATTLIST author name CDATA #REQUIRED>
+]>
 <library>   
-    <book num="1" type="Drame">
+    <book num="_1" type="Drame">
         <title name="book1">book1</title>
         <author name="safouane">safouane</author>
-    </book>
-    <book num="2" type="Aventure">
-        <title name="title">book2</title>
-        <author name="author">elharrak</author>
-    </book>
-    <book num="4" type="Fiction">
-        <title name="title">book3</title>
-        <author name="author">safouane_3</author>
-    </book>
-    <book num="5" type="Policier">
-        <title name="title">book1</title>
-        <author name="author">safouane</author>
     </book>
 </library>
